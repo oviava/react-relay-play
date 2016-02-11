@@ -1,8 +1,8 @@
 {
-  "name": "react-relay",
+  "name": "react-play",
   "version": "0.0.1",
   "description": "Portofolio App",
-  "main": "index.js",
+  "main": "devServer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +16,8 @@
   "license": "MIT",
   "dependencies": {
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "react-relay": "^0.6.1"
   },
   "devDependencies": {
     "babel": "^6.5.1",
@@ -27,6 +28,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.0",
     "babel-preset-stage-0": "^6.5.0",
+    "babel-relay-plugin": "^0.6.3",
     "eslint": "^1.10.3",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^3.16.1",
