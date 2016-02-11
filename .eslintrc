@@ -1,0 +1,12 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "ecmaFeatures": {
+    "modules": true,
+    "jsx": true,
+    "classes": true
+  },
+  "env": {
+    "browser": true,
+  }
+}
