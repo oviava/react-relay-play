@@ -2,6 +2,7 @@
   "name": "react-play",
   "version": "0.0.1",
   "description": "Portofolio App",
+  "repository": "https://github.com/oviava/react-relay.git",
   "main": "devServer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +18,9 @@
   "dependencies": {
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "react-relay": "^0.6.1"
+    "react-relay": "^0.6.1",
+    "react-router": "^2.0.0",
+    "react-router-relay": "^0.9.0"
   },
   "devDependencies": {
     "babel": "^6.5.1",
