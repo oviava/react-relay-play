@@ -19,6 +19,8 @@
   "author": "Ovidiu Avasilcai (ovidiu.avasilcai@gmail.com)",
   "license": "MIT",
   "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.5.2",
     "history": "^2.0.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
@@ -36,14 +38,23 @@
     "babel-preset-react-hmre": "^1.1.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-relay-plugin": "^0.6.3",
+    "babel-relay-plugin-loader": "^0.6.4",
+    "css-loader": "^0.23.1",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.0",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^3.16.1",
     "express": "^4.13.4",
+    "file-loader": "^0.8.5",
     "rimraf": "^2.5.1",
+    "style-loader": "^0.13.0",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.7.1"
+  },
+  "metadata": {
+    "graphql": {
+      "schema": "./schema/schema.json"
+    }
   }
 }
