@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import TabBar from '../components/TabBar';
+import NavBar from '../components/NavBar';
 
 class Application extends Component {
   static propTypes = {
@@ -9,11 +9,11 @@ class Application extends Component {
   render() {
     const { children } = this.props;
     return (
-      <div className="container">
-        <section className="main">
+      <div>
+        <NavBar />
+        <section id="main" className="container">
           { children }
         </section>
-        <TabBar />
       </div>
     );
   }

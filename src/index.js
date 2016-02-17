@@ -15,7 +15,8 @@ import Presentations from './components/Presentations';
 import Application from './containers/Application';
 
 // css
-import '../css/main.css';
+import '../assets/css/bootstrap.min.css';
+import '../assets/css/main.css';
 
 Relay.injectNetworkLayer(
   new Relay.DefaultNetworkLayer('http://localhost:3001/graphql')
