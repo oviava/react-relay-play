@@ -16,7 +16,7 @@ class Presentations extends Component {
         <table className="table">
           <thead>
             <tr>
-              <th>#</th>
+              <th></th>
               {rooms.edges.map(
                 ({ node }) => <RoomItem key={node.id} room={node} />
               )}
