@@ -1,3 +1,3 @@
 `npm install`
 
-Run with node devServer.js
+Run with `node devServer.js`
