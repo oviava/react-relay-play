@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Relay from 'react-relay';
+import { Link } from 'react-router';
 
 class PresentationItem extends Component {
   static propTypes = {
@@ -12,8 +13,12 @@ class PresentationItem extends Component {
       <td>
         <div className="text-left">
           <small>
-            <strong>{presentation.title}</strong>
-            <div className="text-info">{presentation.language ? '(' + presentation.language + ')' : null }</div>
+            <Link to={`/presentations/${presentation.id}`} className="presentation-link">
+              <strong>{presentation.title}</strong>
+            </Link>
+            <div className="text-info">
+              {presentation.language ? `(${presentation.language})` : null }
+            </div>
             <div className="text-warning">{presentation.speaker.name}</div>
           </small>
         </div>
@@ -27,6 +32,7 @@ export default Relay.createContainer(PresentationItem, {
   fragments: {
     presentation: () => Relay.QL`
       fragment on Presentation {
+        id,
         title,
         language,
         speaker {

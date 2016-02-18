@@ -12,10 +12,10 @@ class NavBar extends Component {
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav">
               <li>
-                <Link to="speakers">Speakers</Link>
+                <Link to="/speakers">Speakers</Link>
               </li>
               <li>
-                <Link to="presentations">Presentations</Link>
+                <Link to="/presentations">Presentations</Link>
               </li>
             </ul>
           </div>

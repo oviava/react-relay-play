@@ -9,3 +9,58 @@
   position: absolute;
   bottom: 0px;
 }
+
+.img-fixed {
+  height: 100px;
+  width: 100px;
+  border: 1px #999999 solid;
+  border-radius: 2px;
+}
+.speaker-img {
+  display: flex;
+}
+
+.vertical-align {
+  align-items: center;
+  height: auto;
+  padding-top: 12px;
+}
+
+.speaker-item {
+  margin: 4px 4px 8px 4px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.speaker-name {
+  align-self: center;
+  text-align: center;
+  width: 140px;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+.speaker-company {
+  align-self: center;
+  font-weight: bolder;
+}
+
+.speaker-position {
+  width: 140px;
+  text-align: center;
+}
+
+.speakers-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.speakers-container a.speaker-link:hover {
+  background-color: #EEEEEE;
+}
+
+td a.presentation-link:hover {
+  background-color: #EEEEEE;
+}
