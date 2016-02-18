@@ -1,0 +1,3 @@
+MIT license for everything but the contents of assets/img.
+
+Images: You may use the images but cannot redistribute.
