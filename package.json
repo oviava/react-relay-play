@@ -4,7 +4,7 @@
   "description": "Portofolio App",
   "repository": {
     "type": "git",
-    "url": "https://github.com/oviava/react-relay.git"
+    "url": "https://github.com/oviava/react-relay-play.git"
   },
   "main": "devServer.js",
   "scripts": {
