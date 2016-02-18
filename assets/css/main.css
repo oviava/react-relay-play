@@ -61,6 +61,14 @@
   background-color: #EEEEEE;
 }
 
+.speakers-container a.speaker-link {
+  color: black;
+}
+
 td a.presentation-link:hover {
   background-color: #EEEEEE;
+}
+
+td a.presentation-link {
+  color: black;
 }

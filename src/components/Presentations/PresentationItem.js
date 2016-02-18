@@ -19,7 +19,9 @@ class PresentationItem extends Component {
             <div className="text-info">
               {presentation.language ? `(${presentation.language})` : null }
             </div>
-            <div className="text-warning">{presentation.speaker.name}</div>
+            <Link to={`/speakers/${presentation.speaker.id}`}>
+              <div className="text-warning">{presentation.speaker.name}</div>
+            </Link>
           </small>
         </div>
       </td>
@@ -36,6 +38,7 @@ export default Relay.createContainer(PresentationItem, {
         title,
         language,
         speaker {
+          id,
           name
         }
       }
