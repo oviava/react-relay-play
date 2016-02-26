@@ -17,6 +17,7 @@ import Speakers from './components/Speakers/Speakers';
 import SpeakerDetail from './components/SpeakerDetail';
 import PresentationDetail from './components/PresentationDetail';
 import Application from './containers/Application';
+import Loader from './components/Loader';
 
 // css
 import '../assets/css/bootstrap.min.css';
@@ -31,7 +32,7 @@ const documentSelector = document.getElementById('root');
 render(
   <RelayRouter history={browserHistory}>
     <Route path="/" component={Application}>
-      <Route path="/presentations" component={Presentations} queries={ViewerQueries}/>
+      <Route path="/presentations" component={Presentations} queries={ViewerQueries} />
       <Route path="/speakers" component={Speakers} queries={ViewerQueries} />
       <Route path="/speakers/:id" component={SpeakerDetail} queries={NodeQueries} />
       <Route path="/presentations/:id" component={PresentationDetail} queries={NodeQueries} />

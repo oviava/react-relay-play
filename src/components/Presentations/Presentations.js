@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Relay from 'react-relay';
-import ScheduleRow from './ScheduleRow';
-import RoomItem from './RoomItem';
+import ScheduleGroup from './ScheduleGroup';
 
 
 class Presentations extends Component {
@@ -10,23 +9,14 @@ class Presentations extends Component {
   };
 
   render() {
-    const { rooms, schedules } = this.props.viewer;
+    const { schedules } = this.props.viewer;
     return (
       <div className="row">
+        <h1>Presentations</h1>
         <table className="table">
-          <thead>
-            <tr>
-              <th></th>
-              {rooms.edges.map(
-                ({ node }) => <RoomItem key={node.id} room={node} />
-              )}
-            </tr>
-          </thead>
-          <tbody>
-            {schedules.edges.map(
-              ({ node }) => <ScheduleRow key={node.id} schedule={node} />
-            )}
-          </tbody>
+          {schedules.edges.map(
+            ({ node }) => <ScheduleGroup key={node.id} schedule={node} />
+          )}
         </table>
       </div>
     );
@@ -37,19 +27,11 @@ export default Relay.createContainer(Presentations, {
   fragments: {
     viewer: () => Relay.QL`
       fragment on Viewer {
-        rooms(first: 10) {
-          edges {
-            node {
-              id,
-              ${RoomItem.getFragment('room')}
-            }
-          }
-        }
         schedules(first: 10) {
           edges {
             node {
               id,
-              ${ScheduleRow.getFragment('schedule')}
+              ${ScheduleGroup.getFragment('schedule')}
             }
           }
         }
