@@ -17,7 +17,9 @@ class PresentationRow extends Component {
     const { presentation } = this.props;
     return (
         <tr className="presentation-tr">
-          <td className="presentation-title">{presentation.title}</td>
+          <td className="presentation-title">
+            <Link to={`/presentations/${presentation.id}`}>{presentation.title}</Link>
+          </td>
           <td className="text-primary">
             <Link to={`/speakers/${presentation.speaker.id}`}>{presentation.speaker.name}</Link>
           </td>
