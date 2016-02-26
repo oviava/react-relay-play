@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Relay from 'react-relay';
 import { Link } from 'react-router';
-import { ReactCSSTransitionGroup } from 'react-addons-css-transition-group';
 
 
 class PresentationRow extends Component {

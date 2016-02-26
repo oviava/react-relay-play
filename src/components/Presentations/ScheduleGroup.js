@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Relay from 'react-relay';
 import PresentationRow from './PresentationRow';
 import Loader from '../Loader.js';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class ScheduleGroup extends Component {
   static propTypes = {
@@ -47,9 +48,9 @@ class ScheduleGroup extends Component {
   renderPresentations() {
     const { presentations } = this.props.schedule;
     return (
-      presentations.map(
-        (presentation) => <PresentationRow key={presentation.id} presentation={presentation} />
-      )
+        presentations.map(
+          (presentation) => <PresentationRow key={presentation.id} presentation={presentation} />
+        )
     );
   }
 
@@ -66,7 +67,7 @@ class ScheduleGroup extends Component {
           <td colSpan={4} onClick={this.handleShowPresentations}>
             <span className={arrow}></span>{schedule.startTime} - { schedule.endTime }
           </td>
-          <td onClick={this.refreshPresentations} style={{width: '7%'}}>
+          <td onClick={this.refreshPresentations} style={{ width: '7%' }}>
             <div className="pr-status"></div>
           </td>
         </tr>

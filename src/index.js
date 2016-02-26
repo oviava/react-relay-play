@@ -17,7 +17,6 @@ import Speakers from './components/Speakers/Speakers';
 import SpeakerDetail from './components/SpeakerDetail';
 import PresentationDetail from './components/PresentationDetail';
 import Application from './containers/Application';
-import Loader from './components/Loader';
 
 // css
 import '../assets/css/bootstrap.min.css';
