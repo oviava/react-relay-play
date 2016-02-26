@@ -36,6 +36,7 @@ class ScheduleGroup extends Component {
   }
 
   isReady({ ready, stale }) {
+    // ready state https://facebook.github.io/relay/docs/guides-ready-state.html
     if (ready === true && stale === false) {
       this.setState({
         loading: false,
@@ -65,7 +66,7 @@ class ScheduleGroup extends Component {
           <td colSpan={4} onClick={this.handleShowPresentations}>
             <span className={arrow}></span>{schedule.startTime} - { schedule.endTime }
           </td>
-          <td onClick={this.refreshPresentations}>
+          <td onClick={this.refreshPresentations} style={{width: '7%'}}>
             <div className="pr-status"></div>
           </td>
         </tr>
