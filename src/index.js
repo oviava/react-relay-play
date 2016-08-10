@@ -4,8 +4,8 @@ import { render } from 'react-dom';
 import Relay from 'react-relay';
 
 // Router
-import { RelayRouter } from 'react-router-relay';
-import { Route, browserHistory } from 'react-router';
+import useRelay from 'react-router-relay';
+import { Route, Router, browserHistory, applyRouterMiddleware } from 'react-router';
 
 // Queries
 import ViewerQueries from './queries/ViewerQueries';
@@ -29,13 +29,17 @@ Relay.injectNetworkLayer(
 const documentSelector = document.getElementById('root');
 
 render(
-  <RelayRouter history={browserHistory}>
+  <Router
+    history={browserHistory}
+    render={applyRouterMiddleware(useRelay)}
+    environment={Relay.Store}
+  >
     <Route path="/" component={Application}>
       <Route path="/presentations" component={Presentations} queries={ViewerQueries} />
       <Route path="/speakers" component={Speakers} queries={ViewerQueries} />
       <Route path="/speakers/:id" component={SpeakerDetail} queries={NodeQueries} />
       <Route path="/presentations/:id" component={PresentationDetail} queries={NodeQueries} />
     </Route>
-  </RelayRouter>,
+  </Router>,
   documentSelector
 );
